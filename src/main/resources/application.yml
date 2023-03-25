@@ -1,0 +1,12 @@
+server:
+  port: 8083
+
+spring:
+  data:
+    mongodb:
+      database: restgateway
+      host: localhost
+      port: 27017
+      auto-index-creation: true
+  application:
+    name: Sample Spring Boot App
