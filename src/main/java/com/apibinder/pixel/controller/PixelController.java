@@ -26,13 +26,7 @@ public class PixelController {
                                          @RequestParam(required = false) Map<String, String> requestParams,
                                          @PathVariable(required = true) String pixelId) throws IOException {
 
-        BwAgentInfoService bwAgentInfoService = new BwAgentInfoService(userAgent);
-        System.out.println(bwAgentInfoService.getBrowser());
-        System.out.println(bwAgentInfoService.getBrowserType());
-        //System.out.println(bwAgentInfoService.getBrowserVersion());
-        System.out.println(bwAgentInfoService.getOs());
-        System.out.println(bwAgentInfoService.getOsGroup());
-        System.out.println(bwAgentInfoService.getDeviceType());
+        pixelService.doRequest(pixelId, requestParams, userAgent);
 
         InputStream in = getClass()
                 .getResourceAsStream("/static/pixel.png");

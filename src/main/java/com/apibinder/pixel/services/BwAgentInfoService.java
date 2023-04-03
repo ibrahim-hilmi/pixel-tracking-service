@@ -24,6 +24,10 @@ public class BwAgentInfoService implements IAgentInfoService {
 
     @Override
     public String getBrowserVersion() {
+        if (userAgent.getBrowser().getVersion(this.userAgentStr) == null) {
+            return null;
+        }
+
         return userAgent.getBrowser().getVersion(this.userAgentStr).toString();
     }
 
