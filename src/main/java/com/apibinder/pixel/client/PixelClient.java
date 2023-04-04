@@ -51,8 +51,10 @@ public class PixelClient {
     }
 
     private void setupRequestParams(WebClient.RequestHeadersUriSpec<?> spec) {
-        // TODO: 3.04.2023 change this to requestParams
-        requestParams.keySet().forEach(headerKey -> spec.header(headerKey, requestParams.get(headerKey)));
+        spec.uri(builder -> {
+            requestParams.keySet().forEach(headerKey -> builder.queryParam(headerKey, requestParams.get(headerKey)));
+            return builder.build();
+        });
     }
 
     private void setupUserId(WebClient.RequestHeadersUriSpec<?> spec) {
