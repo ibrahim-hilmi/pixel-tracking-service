@@ -14,7 +14,7 @@ public class PixelClient {
     private static final String USERAGENT_KEY_OS = "useragent-os";
     private static final String USERAGENT_KEY_OS_GROUP = "useragent-os-group";
     private static final String USERAGENT_KEY_DEVICE_TYPE = "useragent-device-type";
-    private static final String USER_ID = "uid";
+    private static final String USER_ID = "user_id";
     private String userAgent;
 
     private Map<String, String> requestParams;

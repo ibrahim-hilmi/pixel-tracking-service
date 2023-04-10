@@ -28,8 +28,7 @@ public class PixelController {
 
         pixelService.doRequest(pixelId, requestParams, userAgent);
 
-        InputStream in = getClass()
-                .getResourceAsStream("/static/pixel.png");
+        InputStream in = getClass().getResourceAsStream("/static/pixel.png");
         return IOUtils.toByteArray(in);
     }
 
